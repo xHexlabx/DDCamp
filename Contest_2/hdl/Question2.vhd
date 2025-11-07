@@ -8,7 +8,7 @@
 -- PJ No.       
 -- Syntax       VHDL
 -- Note         
-ฟฟฟฟ
+
 -- Version      1.01
 -- Author       J.Natthapat
 -- Date         2020/12/18
