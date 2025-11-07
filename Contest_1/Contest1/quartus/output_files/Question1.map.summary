@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Nov  7 03:49:06 2025
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
+Revision Name : Question1
+Top-level Entity Name : Question1
+Family : MAX 10
+Total logic elements : 9,148
+    Total combinational functions : 6,895
+    Dedicated logic registers : 5,380
+Total registers : 5538
+Total pins : 94
+Total virtual pins : 0
+Total memory bits : 27,584
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 3
+UFM blocks : 0
+ADC blocks : 0

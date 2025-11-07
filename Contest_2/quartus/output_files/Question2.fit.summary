@@ -1,0 +1,18 @@
+Fitter Status : Successful - Fri Nov  7 08:09:41 2025
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
+Revision Name : Question2
+Top-level Entity Name : Question2
+Family : MAX 10
+Device : 10M50DAF484C6GES
+Timing Models : Preliminary
+Total logic elements : 8,405 / 49,760 ( 17 % )
+    Total combinational functions : 6,948 / 49,760 ( 14 % )
+    Dedicated logic registers : 5,067 / 49,760 ( 10 % )
+Total registers : 5225
+Total pins : 99 / 360 ( 28 % )
+Total virtual pins : 0
+Total memory bits : 27,616 / 1,677,312 ( 2 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 3 / 4 ( 75 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

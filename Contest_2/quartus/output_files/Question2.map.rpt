@@ -1,0 +1,506 @@
+Analysis & Synthesis report for Question2
+Fri Nov  7 08:19:02 2025
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                             ;
++------------------------------------+-----------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Fri Nov  7 08:19:02 2025                   ;
+; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Standard Edition ;
+; Revision Name                      ; Question2                                           ;
+; Top-level Entity Name              ; Question2                                           ;
+; Family                             ; MAX 10                                              ;
+; Total logic elements               ; N/A until Partition Merge                           ;
+;     Total combinational functions  ; N/A until Partition Merge                           ;
+;     Dedicated logic registers      ; N/A until Partition Merge                           ;
+; Total registers                    ; N/A until Partition Merge                           ;
+; Total pins                         ; N/A until Partition Merge                           ;
+; Total virtual pins                 ; N/A until Partition Merge                           ;
+; Total memory bits                  ; N/A until Partition Merge                           ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                           ;
+; Total PLLs                         ; N/A until Partition Merge                           ;
+; UFM blocks                         ; N/A until Partition Merge                           ;
+; ADC blocks                         ; N/A until Partition Merge                           ;
++------------------------------------+-----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C6GES   ;                    ;
+; Top-level entity name                                            ; Question2          ; Question2          ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Restructure Multiplexers                                         ; Off                ; Auto               ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
+    Info: Processing started: Fri Nov  7 08:18:55 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Question2 -c Question2
+Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/BitMapPatt.vhd
+    Info (12022): Found design unit 1: BitMapPatt-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/BitMapPatt.vhd Line: 20
+    Info (12023): Found entity 1: BitMapPatt File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/BitMapPatt.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/RxSerial.vhd
+    Info (12022): Found design unit 1: RxSerial-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/RxSerial.vhd Line: 18
+    Info (12023): Found entity 1: RxSerial File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/RxSerial.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/UserWrDdr.vhd
+    Info (12022): Found design unit 1: UserWrDdr-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/UserWrDdr.vhd Line: 47
+    Info (12023): Found entity 1: UserWrDdr File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/UserWrDdr.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/UserRdDdr.vhd
+    Info (12022): Found design unit 1: UserRdDdr-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/UserRdDdr.vhd Line: 53
+    Info (12023): Found entity 1: UserRdDdr File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/UserRdDdr.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/VGAGenerator.vhd
+    Info (12022): Found design unit 1: VGAGenerator-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/VGAGenerator.vhd Line: 82
+    Info (12023): Found entity 1: VGAGenerator File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/VGAGenerator.vhd Line: 56
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/I2CCtrl.vhd
+    Info (12022): Found design unit 1: I2CCtrl-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/I2CCtrl.vhd Line: 71
+    Info (12023): Found entity 1: I2CCtrl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/I2CCtrl.vhd Line: 50
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMIRom.vhd
+    Info (12022): Found design unit 1: HDMIRom-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMIRom.vhd Line: 62
+    Info (12023): Found entity 1: HDMIRom File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMIRom.vhd Line: 51
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMIConfig.vhd
+    Info (12022): Found design unit 1: HDMIConfig-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMIConfig.vhd Line: 66
+    Info (12023): Found entity 1: HDMIConfig File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMIConfig.vhd Line: 50
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMI.vhd
+    Info (12022): Found design unit 1: HDMI-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMI.vhd Line: 83
+    Info (12023): Found entity 1: HDMI File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/HDMI/HDMI.vhd Line: 50
+Error (10500): VHDL syntax error at Question2.vhd(11) near text "à";  expecting "entity", or "architecture", or "use", or "library", or "package", or "configuration" File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/Question2.vhd Line: 11
+Error (10500): VHDL syntax error at Question2.vhd(11) near text ¸ File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/Question2.vhd Line: 11
+Error (10500): VHDL syntax error at Question2.vhd(11) near text Ÿ File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/Question2.vhd Line: 11
+Error (10523): Ignored construct Question2 at Question2.vhd(28) due to previous errors File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/Question2.vhd Line: 28
+Info (12021): Found 0 design units, including 0 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/Question2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdr.vhd
+    Info (12022): Found design unit 1: MtDdr-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdr.vhd Line: 98
+    Info (12023): Found entity 1: MtDdr File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdr.vhd Line: 51
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdrRd.vhd
+    Info (12022): Found design unit 1: MtDdrRd-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdrRd.vhd Line: 79
+    Info (12023): Found entity 1: MtDdrRd File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdrRd.vhd Line: 51
+Info (12021): Found 2 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdrWr.vhd
+    Info (12022): Found design unit 1: MtDdrWr-rtl File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdrWr.vhd Line: 79
+    Info (12023): Found entity 1: MtDdrWr File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/hdl/MtDdr/MtDdrWr.vhd Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/ddr3_qsys.v
+    Info (12023): Found entity 1: ddr3_qsys File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/ddr3_qsys.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0.v
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0_avalon_st_adapter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0_rsp_mux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0_rsp_demux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0_cmd_mux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0_cmd_demux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_uncompressed_only File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv Line: 39
+Info (12021): Found 5 design units, including 5 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 40
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 55
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 77
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 98
+    Info (12023): Found entity 5: altera_merlin_burst_adapter_13_1 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 264
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_new.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_new File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_adapter_new.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_incr_burst_converter.sv
+    Info (12023): Found entity 1: altera_incr_burst_converter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_incr_burst_converter.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_wrap_burst_converter.sv
+    Info (12023): Found entity 1: altera_wrap_burst_converter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_wrap_burst_converter.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_default_burst_converter.sv
+    Info (12023): Found entity 1: altera_default_burst_converter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_default_burst_converter.sv Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_address_alignment.sv Line: 26
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0_router_002_default_decode File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: ddr3_qsys_mm_interconnect_0_router_002 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: ddr3_qsys_mm_interconnect_0_router_default_decode File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: ddr3_qsys_mm_interconnect_0_router File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_avalon_mm_clock_crossing_bridge.v
+    Info (12023): Found entity 1: altera_avalon_mm_clock_crossing_bridge File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_avalon_mm_clock_crossing_bridge.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_avalon_dc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_dc_fifo File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_avalon_dc_fifo.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_dcfifo_synchronizer_bundle.v
+    Info (12023): Found entity 1: altera_dcfifo_synchronizer_bundle File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_dcfifo_synchronizer_bundle.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_c0.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_c0 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_c0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_mm_st_converter.v
+    Info (12023): Found entity 1: alt_mem_ddrx_mm_st_converter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_mm_st_converter.v Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_addr_cmd.v
+    Info (12023): Found entity 1: alt_mem_ddrx_addr_cmd File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_addr_cmd.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_addr_cmd_wrap.v
+    Info (12023): Found entity 1: alt_mem_ddrx_addr_cmd_wrap File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_addr_cmd_wrap.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ddr2_odt_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ddr2_odt_gen File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ddr2_odt_gen.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ddr3_odt_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ddr3_odt_gen File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ddr3_odt_gen.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_lpddr2_addr_cmd.v
+    Info (12023): Found entity 1: alt_mem_ddrx_lpddr2_addr_cmd File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_lpddr2_addr_cmd.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_odt_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_odt_gen File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_odt_gen.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_rdwr_data_tmg.v
+    Info (12023): Found entity 1: alt_mem_ddrx_rdwr_data_tmg File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_rdwr_data_tmg.v Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_arbiter.v
+    Info (12023): Found entity 1: alt_mem_ddrx_arbiter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_arbiter.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_burst_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_burst_gen File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_burst_gen.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_cmd_gen.v
+    Info (12023): Found entity 1: alt_mem_ddrx_cmd_gen File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_cmd_gen.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_csr.v
+    Info (12023): Found entity 1: alt_mem_ddrx_csr File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_csr.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_buffer.v
+    Info (12023): Found entity 1: alt_mem_ddrx_buffer File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_buffer.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_buffer_manager.v
+    Info (12023): Found entity 1: alt_mem_ddrx_buffer_manager File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_buffer_manager.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_burst_tracking.v
+    Info (12023): Found entity 1: alt_mem_ddrx_burst_tracking File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_burst_tracking.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_dataid_manager.v
+    Info (12023): Found entity 1: alt_mem_ddrx_dataid_manager File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_dataid_manager.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_fifo.v
+    Info (12023): Found entity 1: alt_mem_ddrx_fifo File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_fifo.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_list.v
+    Info (12023): Found entity 1: alt_mem_ddrx_list File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_list.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_rdata_path.v
+    Info (12023): Found entity 1: alt_mem_ddrx_rdata_path File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_rdata_path.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_wdata_path.v
+    Info (12023): Found entity 1: alt_mem_ddrx_wdata_path File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_wdata_path.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_decoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder.v Line: 18
+Info (12021): Found 3 design units, including 3 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder_32_syn.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_decoder_32_decode File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder_32_syn.v Line: 63
+    Info (12023): Found entity 2: alt_mem_ddrx_ecc_decoder_32_altecc_decoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder_32_syn.v Line: 238
+    Info (12023): Found entity 3: alt_mem_ddrx_ecc_decoder_32 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder_32_syn.v Line: 412
+Info (12021): Found 3 design units, including 3 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder_64_syn.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_decoder_64_decode File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder_64_syn.v Line: 63
+    Info (12023): Found entity 2: alt_mem_ddrx_ecc_decoder_64_altecc_decoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder_64_syn.v Line: 390
+    Info (12023): Found entity 3: alt_mem_ddrx_ecc_decoder_64 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_decoder_64_syn.v Line: 630
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_encoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder.v Line: 18
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder_32_syn.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_encoder_32_altecc_encoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder_32_syn.v Line: 59
+    Info (12023): Found entity 2: alt_mem_ddrx_ecc_encoder_32 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder_32_syn.v Line: 229
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder_64_syn.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_encoder_64_altecc_encoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder_64_syn.v Line: 59
+    Info (12023): Found entity 2: alt_mem_ddrx_ecc_encoder_64 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder_64_syn.v Line: 328
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v
+    Info (12023): Found entity 1: alt_mem_ddrx_ecc_encoder_decoder_wrapper File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_axi_st_converter.v
+    Info (12023): Found entity 1: alt_mem_ddrx_axi_st_converter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_axi_st_converter.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_input_if.v
+    Info (12023): Found entity 1: alt_mem_ddrx_input_if File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_input_if.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_rank_timer.v
+    Info (12023): Found entity 1: alt_mem_ddrx_rank_timer File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_rank_timer.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_sideband.v
+    Info (12023): Found entity 1: alt_mem_ddrx_sideband File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_sideband.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_tbp.v
+    Info (12023): Found entity 1: alt_mem_ddrx_tbp File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_tbp.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_timing_param.v
+    Info (12023): Found entity 1: alt_mem_ddrx_timing_param File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_timing_param.v Line: 20
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_controller.v
+    Info (12023): Found entity 1: alt_mem_ddrx_controller File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_controller.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_ddrx_controller_st_top.v
+    Info (12023): Found entity 1: alt_mem_ddrx_controller_st_top File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_ddrx_controller_st_top.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/alt_mem_if_nextgen_ddr3_controller_core.sv
+    Info (12023): Found entity 1: alt_mem_if_nextgen_ddr3_controller_core File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/alt_mem_if_nextgen_ddr3_controller_core.sv Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/altera_mem_if_sequencer_rst.sv
+    Info (12023): Found entity 1: altera_mem_if_sequencer_rst File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_mem_if_sequencer_rst.sv Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_avalon_st_adapter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_cmd_demux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_cmd_mux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router_default_decode File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router_001_default_decode File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router_001 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_rsp_demux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_rsp_mux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_s0_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_ac_ROM_reg.v
+    Info (12023): Found entity 1: rw_manager_ac_ROM_reg File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_ac_ROM_reg.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_bitcheck.v
+    Info (12023): Found entity 1: rw_manager_bitcheck File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_bitcheck.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_core.sv
+    Info (12023): Found entity 1: rw_manager_core File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_core.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_datamux.v
+    Info (12023): Found entity 1: rw_manager_datamux File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_datamux.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_data_broadcast.v
+    Info (12023): Found entity 1: rw_manager_data_broadcast File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_data_broadcast.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_data_decoder.v
+    Info (12023): Found entity 1: rw_manager_data_decoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_data_decoder.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_ddr3.v
+    Info (12023): Found entity 1: rw_manager_ddr3 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_ddr3.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_di_buffer.v
+    Info (12023): Found entity 1: rw_manager_di_buffer File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_di_buffer.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_di_buffer_wrap.v
+    Info (12023): Found entity 1: rw_manager_di_buffer_wrap File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_di_buffer_wrap.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_dm_decoder.v
+    Info (12023): Found entity 1: rw_manager_dm_decoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_dm_decoder.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_generic.sv
+    Info (12023): Found entity 1: rw_manager_generic File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_generic.sv Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_inst_ROM_reg.v
+    Info (12023): Found entity 1: rw_manager_inst_ROM_reg File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_inst_ROM_reg.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_jumplogic.v
+    Info (12023): Found entity 1: rw_manager_jumplogic File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_jumplogic.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_lfsr12.v
+    Info (12023): Found entity 1: rw_manager_lfsr12 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_lfsr12.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_lfsr36.v
+    Info (12023): Found entity 1: rw_manager_lfsr36 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_lfsr36.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_lfsr72.v
+    Info (12023): Found entity 1: rw_manager_lfsr72 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_lfsr72.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_pattern_fifo.v
+    Info (12023): Found entity 1: rw_manager_pattern_fifo File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_pattern_fifo.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_ram.v
+    Info (12023): Found entity 1: rw_manager_ram File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_ram.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_ram_csr.v
+    Info (12023): Found entity 1: rw_manager_ram_csr File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_ram_csr.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_read_datapath.v
+    Info (12023): Found entity 1: rw_manager_read_datapath File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_read_datapath.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_write_decoder.v
+    Info (12023): Found entity 1: rw_manager_write_decoder File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_write_decoder.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/sequencer_m10.sv
+    Info (12023): Found entity 1: sequencer_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/sequencer_m10.sv Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/sequencer_phy_mgr.sv
+    Info (12023): Found entity 1: sequencer_phy_mgr File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/sequencer_phy_mgr.sv Line: 73
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/sequencer_pll_mgr.sv
+    Info (12023): Found entity 1: sequencer_pll_mgr File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/sequencer_pll_mgr.sv Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_m10_ac_ROM.v
+    Info (12023): Found entity 1: rw_manager_m10_ac_ROM File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_m10_ac_ROM.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/rw_manager_m10_inst_ROM.v
+    Info (12023): Found entity 1: rw_manager_m10_inst_ROM File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/rw_manager_m10_inst_ROM.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/afi_mux_ddr3_ddrx.v
+    Info (12023): Found entity 1: afi_mux_ddr3_ddrx File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/afi_mux_ddr3_ddrx.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_clock_pair_generator.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_clock_pair_generator File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_clock_pair_generator.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_read_valid_selector.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_read_valid_selector File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_read_valid_selector.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_addr_cmd_datapath.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_addr_cmd_datapath File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_addr_cmd_datapath.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_reset_m10.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_reset_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_reset_m10.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_memphy_m10.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_memphy_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_memphy_m10.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_dqdqs_pads_m10.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_dqdqs_pads_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_dqdqs_pads_m10.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_reset_sync.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_reset_sync File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_reset_sync.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_fr_cycle_shifter.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_fr_cycle_shifter File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_fr_cycle_shifter.v Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_read_datapath_m10.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_read_datapath_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_read_datapath_m10.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_write_datapath_m10.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_write_datapath_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_write_datapath_m10.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_simple_ddio_out_m10.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_simple_ddio_out_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_simple_ddio_out_m10.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/max10emif_dcfifo.sv
+    Info (12023): Found entity 1: max10emif_dcfifo File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/max10emif_dcfifo.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_iss_probe.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_iss_probe File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_iss_probe.v Line: 17
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_addr_cmd_pads_m10.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_addr_cmd_pads_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_addr_cmd_pads_m10.v Line: 17
+    Info (12023): Found entity 2: addr_cmd_pad_m10 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_addr_cmd_pads_m10.v Line: 418
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_flop_mem.v
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0_flop_mem File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0_flop_mem.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_p0 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_p0.sv Line: 18
+Info (12021): Found 2 design units, including 2 entities, in source file ddr3_qsys/synthesis/submodules/altera_gpio_lite.sv
+    Info (12023): Found entity 1: altgpio_one_bit File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_gpio_lite.sv Line: 16
+    Info (12023): Found entity 2: altera_gpio_lite File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/altera_gpio_lite.sv Line: 940
+Info (12021): Found 1 design units, including 1 entities, in source file ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_pll0.sv
+    Info (12023): Found entity 1: ddr3_qsys_ddr3_controller_pll0 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/ddr3_qsys/synthesis/submodules/ddr3_qsys_ddr3_controller_pll0.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartusip/PLL50.v
+    Info (12023): Found entity 1: PLL50 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartusip/PLL50.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartusip/fifo256x32to64.v
+    Info (12023): Found entity 1: fifo256x32to64 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartusip/fifo256x32to64.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartusip/fifo256x64to32.v
+    Info (12023): Found entity 1: fifo256x64to32 File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartusip/fifo256x64to32.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartusip/PLL_VGA.v
+    Info (12023): Found entity 1: PLL_VGA File: /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartusip/PLL_VGA.v Line: 39
+Info (144001): Generated suppressed messages file /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/output_files/Question2.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
+    Error: Peak virtual memory: 483 megabytes
+    Error: Processing ended: Fri Nov  7 08:19:02 2025
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:16
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/hextex/Documents/GitHub/DDCamp/Contest_2/quartus/output_files/Question2.map.smsg.
+
+

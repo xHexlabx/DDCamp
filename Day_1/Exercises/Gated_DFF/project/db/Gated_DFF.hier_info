@@ -1,0 +1,8 @@
+|Gated_DFF
+Clk => r_Q_out.CLK
+RstB => r_Q_out.OUTPUTSELECT
+Ena => r_Q_out.OUTPUTSELECT
+D_in => r_Q_out.DATAB
+Q_out << r_Q_out.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Q_out",
+					"strict" : false
+				},
+				{
+					"name" : "RstB",
+					"strict" : false
+				},
+				{
+					"name" : "D_in",
+					"strict" : false
+				},
+				{
+					"name" : "Ena",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

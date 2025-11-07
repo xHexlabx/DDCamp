@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/hextex/Documents/GitHub/DDCamp/Day_1/Exercises/Mux2to1/sim
+Emux2to1
+Z1 w1762282998
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8../hdl/Mux2to1.vhd
+Z5 F../hdl/Mux2to1.vhd
+l0
+L4 1
+VMUW3odE^aP=j_SP:`<dNz1
+!s100 iB7^OUPd:icz4Ua=lnhLP0
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1762283289
+!i10b 1
+Z8 !s108 1762283289.000000
+Z9 !s90 -reportprogress|300|-work|work|../hdl/Mux2to1.vhd|
+Z10 !s107 ../hdl/Mux2to1.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+DEx4 work 7 mux2to1 0 22 MUW3odE^aP=j_SP:`<dNz1
+!i122 0
+l14
+L13 6
+VKJB[_1>0LK[B`7j9kUTf23
+!s100 L`3zoG;JXiBkebglJS12`3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_mux2to1
+Z13 w1762283064
+R2
+R3
+!i122 1
+R0
+Z14 8tb_Mux2to1.vhd
+Z15 Ftb_Mux2to1.vhd
+l0
+L5 1
+VLRA4>`INbI`V::U:;BPYa1
+!s100 H`=d7gK2m2=8FmRD?;6fW3
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|tb_Mux2to1.vhd|
+!s107 tb_Mux2to1.vhd|
+!i113 1
+R11
+R12
+Atest
+R2
+R3
+DEx4 work 10 tb_mux2to1 0 22 LRA4>`INbI`V::U:;BPYa1
+!i122 1
+l27
+L9 65
+VMK5eJ]12QCh1LA=M<3Hbn2
+!s100 MG2FbSC6H0CC5XP7`4O2F1
+R6
+32
+R7
+!i10b 1
+R8
+R16
+Z17 !s107 tb_Mux2to1.vhd|
+!i113 1
+R11
+R12

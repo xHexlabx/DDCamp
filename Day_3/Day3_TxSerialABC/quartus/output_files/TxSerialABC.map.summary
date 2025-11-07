@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Nov  7 02:01:41 2025
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
+Revision Name : TxSerialABC
+Top-level Entity Name : TxSerialABC
+Family : MAX 10
+Total logic elements : 152
+    Total combinational functions : 151
+    Dedicated logic registers : 86
+Total registers : 86
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
