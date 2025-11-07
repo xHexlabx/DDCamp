@@ -1,0 +1,2 @@
+stty -F /dev/ttyUSB0 921600 raw -echo
+pv /home/hextex/Documents/GitHub/DDCamp/Contest_2/blue.bmp > /dev/ttyUSB0

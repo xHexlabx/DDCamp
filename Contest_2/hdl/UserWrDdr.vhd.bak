@@ -1,0 +1,176 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+----------------------------------------------------------------------------------
+-- Entity Declaration
+----------------------------------------------------------------------------------
+entity UserWrDdr is
+	port (
+		-- System
+		RstB          : in  std_logic;                     -- Active Low Reset
+		Clk           : in  std_logic;                     -- 100 MHz Clock
+
+		-- Write Control Interface
+		MemInitDone   : in  std_logic;
+		MtDdrWrReq    : out std_logic;
+		MtDdrWrBusy   : in  std_logic;
+		MtDdrWrAddr   : out std_logic_vector(28 downto 7);
+
+		-- T2U Write FIFO Interface
+		T2UWrFfRdEn   : out std_logic;
+		T2UWrFfRdData : in  std_logic_vector(63 downto 0);
+		T2UWrFfRdCnt  : in  std_logic_vector(15 downto 0);
+
+		-- User Write to Display FIFO Interface
+		UWr2DFfRdEn   : in  std_logic;
+		UWr2DFfRdData : out std_logic_vector(63 downto 0);
+		UWr2DFfRdCnt  : out std_logic_vector(15 downto 0)
+	);
+end entity UserWrDdr;
+
+----------------------------------------------------------------------------------
+-- Architecture
+----------------------------------------------------------------------------------
+architecture rtl of UserWrDdr is
+
+	-- FSM States
+	type UserWrStateType is (
+		stInit,
+		stCheckFf,
+		stReq,
+		stWtMtDone
+	);
+
+	-- Internal Signals
+	signal rState        : UserWrStateType;
+	signal rMemInitDone  : std_logic_vector(1 downto 0);
+	signal rMtDdrWrReq   : std_logic;
+	signal rMtDdrWrAddr  : std_logic_vector(28 downto 7);
+	signal rRowReqCnt    : std_logic_vector(4 downto 0);
+
+begin
+
+----------------------------------------------------------------------------------
+-- Output Mapping
+----------------------------------------------------------------------------------
+	-- FIFO Pass-through
+	T2UWrFfRdEn       <= UWr2DFfRdEn;
+	UWr2DFfRdData     <= T2UWrFfRdData;
+	UWr2DFfRdCnt      <= T2UWrFfRdCnt;
+
+	-- DDR Interface
+	MtDdrWrReq        <= rMtDdrWrReq;
+	MtDdrWrAddr       <= rMtDdrWrAddr;
+
+----------------------------------------------------------------------------------
+-- Synchronize MemInitDone
+----------------------------------------------------------------------------------
+	process (Clk)
+	begin
+		if rising_edge(Clk) then
+			if RstB = '0' then
+				rMemInitDone <= (others => '0');
+			else
+				rMemInitDone <= rMemInitDone(0) & MemInitDone;
+			end if;
+		end if;
+	end process;
+
+----------------------------------------------------------------------------------
+-- Generate DDR Write Request
+----------------------------------------------------------------------------------
+	process (Clk)
+	begin
+		if rising_edge(Clk) then
+			if RstB = '0' then
+				rMtDdrWrReq <= '0';
+			else
+				rMtDdrWrReq <= '1' when (rState = stReq) else '0';
+			end if;
+		end if;
+	end process;
+
+----------------------------------------------------------------------------------
+-- DDR Write Address Generation
+----------------------------------------------------------------------------------
+	process (Clk)
+	begin
+		if rising_edge(Clk) then
+			if RstB = '0' then
+				-- Start at address 24544 (0x05FE0)
+				rMtDdrWrAddr <= "00" & x"05FE0";
+			else
+				if (rState = stWtMtDone) and (MtDdrWrBusy = '0') then
+					
+					-- Check if reached first row last col
+					if rMtDdrWrAddr(26 downto 7) = std_logic_vector(to_unsigned(31, 20)) then
+						rMtDdrWrAddr(28 downto 27) <= rMtDdrWrAddr(28 downto 27) + 1;
+						rMtDdrWrAddr(26 downto 7)  <= x"05FE0";
+
+					-- If written full row, go up one line
+					elsif rRowReqCnt = "11111" then
+						rMtDdrWrAddr <= std_logic_vector(unsigned(rMtDdrWrAddr) - 63);
+
+					else
+						rMtDdrWrAddr <= std_logic_vector(unsigned(rMtDdrWrAddr) + 1);
+					end if;
+
+				end if;
+			end if;
+		end if;
+	end process;
+
+----------------------------------------------------------------------------------
+-- Row Request Counter
+----------------------------------------------------------------------------------
+	process (Clk)
+	begin
+		if rising_edge(Clk) then
+			if RstB = '0' then
+				rRowReqCnt <= (others => '0');
+			else
+				if (rState = stWtMtDone) and (MtDdrWrBusy = '0') then
+					rRowReqCnt <= std_logic_vector(unsigned(rRowReqCnt) + 1);
+				end if;
+			end if;
+		end if;
+	end process;
+
+----------------------------------------------------------------------------------
+-- FSM : DDR Write Control
+----------------------------------------------------------------------------------
+	process (Clk)
+	begin
+		if rising_edge(Clk) then
+			if RstB = '0' then
+				rState <= stInit;
+			else
+				case rState is
+
+					when stInit =>
+						if rMemInitDone(1) = '1' then
+							rState <= stCheckFf;
+						end if;
+
+					when stCheckFf =>
+						if T2UWrFfRdCnt(15 downto 4) /= (others => '0') then
+							rState <= stReq;
+						end if;
+
+					when stReq =>
+						if MtDdrWrBusy = '1' then
+							rState <= stWtMtDone;
+						end if;
+
+					when stWtMtDone =>
+						if MtDdrWrBusy = '0' then
+							rState <= stCheckFf;
+						end if;
+
+				end case;
+			end if;
+		end if;
+	end process;
+
+end architecture rtl;

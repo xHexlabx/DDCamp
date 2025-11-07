@@ -1,20 +1,3 @@
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
--- Filename     UserWrDdr.vhd
--- Title        Top
---
--- Company      Design Gateway Co., Ltd.
--- Project      DDCamp
--- PJ No.       
--- Syntax       VHDL
--- Note         
-
--- Version      1.00
--- Author       B.Attapon
--- Date         2017/12/20
--- Remark       New Creation
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.all;
@@ -120,7 +103,7 @@ Begin
 	begin
 		if rising_edge(Clk) then
 			if RstB = '0' then
-				-- start at addr = 24544 (last row first col which is the first received pixcel's addr)
+				-- start at addr = 24544 (last row and first column which is the first received pixcel's address)
 				rMtDdrWrAddr(28 downto 7)	<=	"00" & x"05FE0";
 			else
 				if( (rState = stWtMtDone) and (MtDdrWrBusy = '0') ) then

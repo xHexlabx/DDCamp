@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Nov  7 09:42:47 2025
+Analysis & Synthesis Status : Successful - Fri Nov  7 14:09:01 2025
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Standard Edition
 Revision Name : Question2
 Top-level Entity Name : Question2
 Family : MAX 10
-Total logic elements : 9,171
-    Total combinational functions : 6,920
+Total logic elements : 9,173
+    Total combinational functions : 6,922
     Dedicated logic registers : 5,363
 Total registers : 5521
 Total pins : 97
